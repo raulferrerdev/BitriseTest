@@ -10,6 +10,8 @@ import XCTest
 @testable import BitriseTest
 
 class BitriseTestTests: XCTestCase {
+    
+    let model = BitriseModel(username: "user", repository: "github", numberOfProjects: 20)
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,16 +21,11 @@ class BitriseTestTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testModelContainsAUsername() {
+        XCTAssertTrue(!model.username.isEmpty)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testModelUsernameIsCorrect() {
+        XCTAssertEqual(model.username, "user")
     }
-
 }
