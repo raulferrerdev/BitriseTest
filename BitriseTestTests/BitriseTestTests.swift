@@ -22,7 +22,7 @@ class BitriseTestTests: XCTestCase {
     }
 
     func testModelContainsAUsername() {
-        XCTAssertTrue(!model.username.isEmpty)
+        XCTAssertTrue(model.username.isEmpty)
     }
     
     func testModelUsernameIsCorrect() {
